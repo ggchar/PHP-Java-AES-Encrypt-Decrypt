@@ -30,9 +30,10 @@ public static void main (String [] args) {
         System.out.println(ciphertextHexStr);//output: FECF4F03829004A52144F243A7EBF750
         System.out.println(plaintextHexStr);//output: abcdef
 }
+
 ```
 
-
+<span style="color:red">some **This is Red Bold.** text</span>
 *PHP Test Preview:*
 
 ```
