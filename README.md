@@ -33,7 +33,6 @@ public static void main (String [] args) {
 
 ```
 
-<span style="color:red">some **This is Red Bold.** text</span>
 *PHP Test Preview:*
 
 ```
