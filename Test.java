@@ -4,6 +4,7 @@ import com.test.util.AESUtil;
 public class Test {
 
     public static void main (String [] args) {
+        //AES only supports key sizes of 16, 24 or 32 bytes.
         String key = "s+FZFDjBKMUVDpu=";
         String plainText = "abcdef";
 
