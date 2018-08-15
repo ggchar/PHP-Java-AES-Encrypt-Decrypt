@@ -39,9 +39,9 @@ public static void main (String [] args) {
 <?php
   include 'AESUtil.php';
   
-  $plaintext = "abcdef";
   //AES only supports key sizes of 16, 24 or 32 bytes.
   $key = "s+FZFDjBKMUVDpu=";
+  $plaintext = "abcdef";
   
   $ciphertextBase64 = AESUtil::encryptBase64($plaintext, $key);
   $plaintextBase64 = AESUtil::decryptBase64($ciphertextBase64, $key);
