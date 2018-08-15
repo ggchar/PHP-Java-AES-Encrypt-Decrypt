@@ -12,7 +12,7 @@ PHP Dependencies
 
 *Java Test Preview:*
 
-```
+```Java
 public static void main (String [] args) {
         //AES only supports key sizes of 16, 24 or 32 bytes.
         String key = "s+FZFDjBKMUVDpu=";
@@ -35,7 +35,7 @@ public static void main (String [] args) {
 
 *PHP Test Preview:*
 
-```
+```PH
 <?php
   include 'AESUtil.php';
   
