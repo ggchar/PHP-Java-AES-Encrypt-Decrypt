@@ -13,7 +13,6 @@ PHP Dependencies
 *Java Test Preview:*
 
 ```
-
 public static void main (String [] args) {
         //AES only supports key sizes of 16, 24 or 32 bytes.
         String key = "s+FZFDjBKMUVDpu=";
@@ -31,14 +30,12 @@ public static void main (String [] args) {
         System.out.println(ciphertextHexStr);//output: FECF4F03829004A52144F243A7EBF750
         System.out.println(plaintextHexStr);//output: abcdef
 }
-
 ```
 
 
 *PHP Test Preview:*
 
 ```
-
 <?php
   include 'AESUtil.php';
   
@@ -59,5 +56,4 @@ public static void main (String [] args) {
   echo $ciphertextHexStr."<br/>";//output: fecf4f03829004a52144f243a7ebf750
   echo $plaintextHexStr."<br/>";//output: abcdef
 ?>
-
 ```
