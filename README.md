@@ -3,11 +3,18 @@ Pass data AES encrypted between PHP and Java. Support two ways of encryption and
 
 When you use encryptHexStr method, you will get a ciphertext which is an alphanumeric string. Obviously, when you need to decrypt it, you should call decryptHexStr method.
 
-Java Dependencies
+AESUtil.java Dependencies & environment
 - Apache Commons Coded - http://commons.apache.org/codec/
+- Java Version: 1.8+
 
-PHP Dependencies
+AESUtil5.php Dependencies & environment
 - None
+- PHP Version: 7.0-
+
+AESUtil7.php Dependencies & environment
+- OpenSSL
+- PHP Version: 7.1+
+
 
 
 *Java Test Preview:*
@@ -37,7 +44,31 @@ public static void main (String [] args) {
 
 ```PH
 <?php
-  include 'AESUtil.php';
+  include 'AESUtil5.php';
+  
+  //AES only supports key sizes of 16, 24 or 32 bytes.
+  $key = "s+FZFDjBKMUVDpu=";
+  $plaintext = "abcdef";
+  
+  $ciphertextBase64 = AESUtil::encryptBase64($plaintext, $key);
+  $plaintextBase64 = AESUtil::decryptBase64($ciphertextBase64, $key);
+  
+  $ciphertextHexStr = AESUtil::encryptHexStr($plaintext, $key);
+  $plaintextHexStr = AESUtil::decryptHexStr($ciphertextHexStr, $key);
+  
+  
+  echo $ciphertextBase64."<br/>";//output: /s9PA4KQBKUhRPJDp+v3UA==
+  echo $plaintextBase64."<br/>";//output: abcdef
+  
+  echo $ciphertextHexStr."<br/>";//output: fecf4f03829004a52144f243a7ebf750
+  echo $plaintextHexStr."<br/>";//output: abcdef
+?>
+```
+
+
+```PH
+<?php
+  include 'AESUtil7.php';
   
   //AES only supports key sizes of 16, 24 or 32 bytes.
   $key = "s+FZFDjBKMUVDpu=";
