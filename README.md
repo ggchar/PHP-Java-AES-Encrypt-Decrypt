@@ -9,11 +9,11 @@ AESUtil.java Dependencies & environment
 
 AESUtil5.php Dependencies & environment
 - None
-- PHP Version: 7.0-
+- PHP Version: 5.x 7.0
 
 AESUtil7.php Dependencies & environment
 - OpenSSL
-- PHP Version: 7.1+
+- PHP Version: 5.x 7.0 7.1 7.2
 
 
 
