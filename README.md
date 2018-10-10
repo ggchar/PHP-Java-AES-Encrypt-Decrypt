@@ -1,8 +1,6 @@
 # PHP-Java-AES-Encrypt-Decrypt
-To encrypt and decrypt text using AES/ECB/PKCS5Padding encryption algorithm.
-Pass data AES encrypted between PHP and Java. Support two ways of encryption and decryption: Base64, Hexadecimal.
-
-When you use encryptHexStr method, you will get a ciphertext which is an alphanumeric string. Obviously, when you need to decrypt it, you should call decryptHexStr method.
+To encrypt and decrypt text using AES/ECB/PKCS5Padding encryption algorithm, and pass data AES encrypted between PHP and Java.
+Two output types can be used in encryption and decryption: Base64, Hexadecimal.
 
 AESUtil.java Dependencies & environment
 - Apache Commons Coded - http://commons.apache.org/codec/
@@ -16,6 +14,10 @@ AESUtil7.php Dependencies & environment
 - OpenSSL
 - PHP Version: 5.x 7.0 7.1 7.2
 
+*How to Use?*
+1. Please see the samples below.
+2. Call decryptHexStr() to decrypt a ciphertext which is encrypted by encryptHexStr().
+3. Call decryptBase64() to decrypt a ciphertext which is encrypted by encryptBase64().
 
 
 *Java Test Preview:*
