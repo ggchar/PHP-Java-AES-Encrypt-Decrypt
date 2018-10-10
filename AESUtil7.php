@@ -23,11 +23,11 @@ class AESUtil {
 	}
 	
 	private static function encrypt($plaintext, $key) {
-		return openssl_encrypt($plaintext, "aes-128-cbc", $key, OPENSSL_RAW_DATA); 
+		return openssl_encrypt($plaintext, "aes-128-ecb", $key, OPENSSL_RAW_DATA); 
 	}
 	
 	private static function decrypt($ciphertext, $key) {
-		return openssl_decrypt($ciphertext, "aes-128-cbc", $key, OPENSSL_RAW_DATA); 
+		return openssl_decrypt($ciphertext, "aes-128-ecb", $key, OPENSSL_RAW_DATA); 
 	}	
 }
 ?>
