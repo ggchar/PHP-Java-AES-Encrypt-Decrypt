@@ -1,4 +1,5 @@
 # PHP-Java-AES-Encrypt-Decrypt
+To encrypt and decrypt text using AES/ECB/PKCS5Padding encryption algorithm.
 Pass data AES encrypted between PHP and Java. Support two ways of encryption and decryption: Base64, Hexadecimal.
 
 When you use encryptHexStr method, you will get a ciphertext which is an alphanumeric string. Obviously, when you need to decrypt it, you should call decryptHexStr method.
