@@ -1,4 +1,4 @@
-# PHP-Java-AES-Encrypt-Decrypt
+# PHP-Java-C#-AES-Encrypt-Decrypt
 To encrypt and decrypt text using AES/ECB/PKCS5Padding encryption algorithm, and pass data AES encrypted between PHP and Java.
 Two output types can be used in encryption and decryption: Base64, Hexadecimal.
 
@@ -13,6 +13,9 @@ AESUtil5.php Dependencies & environment
 AESUtil7.php Dependencies & environment
 - OpenSSL
 - PHP Version: 5.x 7.0 7.1 7.2
+
+AESUtil.cs Dependencies & environment
+- .NETFramework 4.0+
 
 *How to Use?*
 1. Please see the samples below.
@@ -90,4 +93,26 @@ public static void main (String [] args) {
   echo $ciphertextHexStr."<br/>";//output: fecf4f03829004a52144f243a7ebf750
   echo $plaintextHexStr."<br/>";//output: abcdef
 ?>
+```
+
+*C# Test Preview:*
+```C#
+static void Main() {
+            //AES only supports key sizes of 16, 24 or 32 bytes.
+            string key = "s+FZFDjBKMUVDpu=";
+            string plainText = "abcdef";
+
+            string ciphertextBase64 = AESUtil.EncryptBase64(plainText, key);
+            string plaintextBase64 = AESUtil.DecryptBase64(ciphertextBase64, key);
+
+            string ciphertextHexStr = AESUtil.EncryptHexStr(plainText, key);
+            string plaintextHexStr = AESUtil.DecryptHexStr(ciphertextHexStr, key);
+
+            Console.WriteLine(ciphertextBase64);//output: /s9PA4KQBKUhRPJDp+v3UA==
+            Console.WriteLine(plaintextBase64);//output: abcdef
+
+            Console.WriteLine(ciphertextHexStr);//output: fecf4f03829004a52144f243a7ebf750
+            Console.WriteLine(plaintextHexStr);//output: abcdef
+        }
+        
 ```
